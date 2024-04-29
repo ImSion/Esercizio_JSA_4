@@ -1,0 +1,412 @@
+nav {
+    background-color: rgb(50, 50, 50);
+}
+.navbar-brand {
+    color: black;
+    text-shadow: 0px 0px 5px rgba(0, 236, 249, 0.563);
+}
+.nav-link {
+    font-size: 18px;
+    color: rgba(0, 236, 249, 0.563);
+}
+#utilitysect {
+    right: 120px;
+    top: 16px;
+}
+
+/* stilizzo le icone della utility sect */
+.bi-bell-fill {
+    font-size: 20px;
+    color: rgba(0, 236, 249, 0.563);
+    transition: 0.4s ease-in-out;
+}
+.bi-bell-fill:hover {
+    text-shadow: 0px 0px 10px rgb(0, 81, 255);
+}
+.bi-cart {
+    font-size: 20px;
+    color: rgba(0, 236, 249, 0.563);
+    padding: 0;
+}
+.bi-cart:hover:before {
+    content: "\f23d";
+    text-shadow: 0px 0px 10px rgb(0, 81, 255);
+    transition: 0.4s ease-in-out;
+
+}
+.bi-search::before {
+    font-size: 18px;
+    color: rgba(0, 236, 249, 0.563);
+}
+
+
+
+/* stilizzo l'immagine del profilo (che funge anche da dropdown btn) */
+#accountsect{
+    right: 30px;
+    top: 2px;
+}
+.accountimg {
+    width: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+#accountsect img:hover{
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px rgb(0, 81, 255);
+}
+
+/* sposto il dropdown menu verso sinistra */
+#accountdrop {
+    background-color: rgb(65, 65, 65);
+    left: -120px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 236, 249, 0.563);
+    transition: 0.4s ease-in-out;
+}
+
+
+/* stilizzo la sezione main con le card dei libri */
+main {
+    margin-top: 58px;
+    background-color: rgb(255, 255, 255);   
+}
+/* nascondo la scritta che scorre */
+.flowing {
+   overflow: hidden; 
+   background-color: rgb(50, 50, 50);
+   height: 40px;
+   display: flex;
+   align-items: center;   
+}
+
+.fading {
+    overflow: hidden; 
+    margin-top: 60px;
+    background-color: rgb(50, 50, 50);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+ }
+
+.fadein-text {
+  font-size: 24px; 
+  margin-bottom: 0;
+  justify-self: center;
+  color:  rgba(0, 236, 249, 0.563);
+  text-shadow: 0px 0px 10px rgba(0, 236, 249, 0.563);
+  opacity: 0; /* Inizia con il testo trasparente */
+  animation: fadeintext 20s ease-in-out infinite;
+}
+
+.scorrimento {
+    position: relative;
+    white-space: nowrap; /* Evita l'andare a capo automatico del testo */
+    animation: scorrimento 30s linear infinite; /* Durata, tipo di movimento e ripetizione */
+    color:  rgba(0, 236, 249, 0.563);
+    margin: 0;
+  }
+
+
+  /* sezione libri/card */
+
+  .booksect-title {
+    margin-top: 30px;
+    font-size: 25px;
+    color: black;
+    text-shadow: 0px 0px 10px rgba(0, 236, 249, 0.563) ;
+    font-weight: 600;
+  }
+
+
+
+#books-section {
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px black;
+}
+.card {
+    width: 250px;
+    margin-bottom: 50px;
+    max-height: 320px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 4px 4px 10px black;
+    background-color: rgba(0, 236, 249, 0.563);
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card:hover {
+    max-height: 100%;
+    margin-left: 5px;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 6px rgba(0, 236, 249, 0.563);
+    z-index: 22;
+}
+
+.cardimg {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-height: 320px;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+
+.card-body {
+    background-color: rgb(50, 50, 50);
+    color: rgba(0, 236, 249, 0.563);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    transition: 0.4s ease-in-out; 
+    overflow: hidden;
+    padding: 0;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+}
+.card:hover .card-body {
+    max-height: 600px;
+    transition-delay: 0.6s;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 6px rgba(0, 236, 249, 0.563);
+
+}
+
+.buybadge {
+    width: 100px;;
+    position: absolute;
+    top: 15px;
+    left: -110px;
+    overflow: hidden;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: end;
+    padding: 2px;
+    color: rgba(0, 236, 249, 0.563);
+    text-shadow: 0px 0px 10px rgba(0, 236, 249, 0.563);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 10px green;
+    transition: 0.4s ease-in-out;
+    animation: acquisto 0.2s linear ;
+    animation-fill-mode: forwards;
+}
+
+.badgetxt {
+    margin-right: 5px;   
+}
+
+.badge-dnone {
+    display: none;
+}
+
+/* stilizzo il carrello e i suoi bottoni */
+.modal-content {
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0px 0px 5px rgba(0, 236, 249, 0.563);
+}
+.modal-header {
+    color: rgba(0, 236, 249, 0.563);
+}
+.btn-close {
+    color: rgba(0, 236, 249, 0.563);
+}
+.buyingcart , .closingcart , .eraseorder {
+    font-size: 14px;
+    background-color: rgb(30, 30, 30);
+    color: rgba(0, 236, 249, 0.563);
+    transition: 0.3s ease-in-out;
+}
+.buyingcart:hover , .closingcart:hover , .eraseorder:hover {
+    transform: scale(1.05);
+    background-color: rgb(30, 30, 30);
+    color: rgba(0, 236, 249, 0.563);
+    box-shadow: 0px 0px 10px rgba(0, 236, 249, 0.563);
+    text-shadow: 0px 0px 10px rgba(0, 236, 249, 0.563);
+}
+
+
+.mycart {
+    padding: 0;
+}
+
+/* stilizzo i bottoni "aggiungi al carrello" delle card */
+.cart-btn {
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+    transition: 0.5s ease-in-out;
+}
+.cart-btn:hover {
+    color: rgba(0, 236, 249, 0.563);
+    background-color: black;
+    box-shadow: 0px 0px 10px rgb(0, 81, 255);
+    transform: scale(1.1);
+}
+
+/* imposto la grandezza delle immagini dei libri nel carrello */
+.cartbookimg {
+    width: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 236, 249, 0.563);
+}
+
+.cartbooks {
+    color: rgba(0, 236, 249, 0.563);
+}
+#cart-totals {
+    color: rgba(0, 236, 249, 0.563);
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+}
+
+/* impostazioni e animazione del pulsante search */
+.search-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 4rem;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(19, 19, 19); */
+    /* border: 2px solid rgb(19, 19, 19); */
+    outline: none;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+    position: relative;
+  }
+  
+  .activesrc {
+    width: 300px;
+  }
+  .search-wrapper input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+    margin-right: 2px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: rgb(19, 19, 19);
+    margin-left: auto;
+    z-index: 1;
+  }
+  .search-btn i {
+    color: #fff;
+    font-size: 16px;
+  }
+
+
+
+/* inizio media query */
+
+/* riadatto la posizione degli elementi a destra della navbar alla comparsa dell'hamburger menu */
+@media screen and (max-width: 767px) {
+    #utilitysect {
+        right: 150px;
+        top: 16px;
+    }
+    #accountsect{
+        right: 70px;
+        top: 0px;
+    }
+}
+@media screen and (max-width: 587px) {
+    .row {
+        padding: 50px;
+    }
+    .card {
+        width: 350px;
+        max-height: 400px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+    .cardimg {
+        width: 100%;
+        max-height: 400px;
+    }
+    
+}
+@media screen and (max-width: 450px) {
+    .row {
+        padding: 50px;
+    }
+    .card {
+        width: 250px;
+        max-height: 320px;
+        margin-left: 0px;
+    }
+    .cardimg {
+        width: 250px;
+        max-height: 320px;
+    }
+    
+}
+@media screen and (max-width: 322px) {
+    .row {
+        padding: 0px;
+    }
+    .card {
+        width: 250px;
+        margin-left: 0px;
+    }
+    .cardimg {
+        width: 250px;
+    }
+    
+}
+
+/* animo le scritte,una che scorre e l'altra che appare/scompare */
+@keyframes scorrimento {
+    from {
+      left: 100%; /* Parte da fuori dello schermo a destra */
+    }
+    to {
+      left: -100%; /* Si muove fino a uscire completamente a sinistra */
+    }
+  }
+
+  @keyframes acquisto {
+    from {
+      right: -100%; /* Parte da fuori dello schermo a destra */
+    }
+    to {
+      left: 0%; /* Si muove fino a uscire completamente a sinistra */
+    }
+  }
+
+  @keyframes fadeintext {
+    0%, 100% {
+      opacity: 0; /* Il testo è invisibile all'inizio e alla fine */
+    }
+    25%, 75% {
+      opacity: 1; /* Il testo diventa completamente visibile */
+    }
+  }
